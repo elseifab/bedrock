@@ -4,7 +4,7 @@ The project package is used as boilerplate at Elseif AB to new WordPress project
 
 This project is supposed to be initialized with a `composer create-project elseif/bedrock your-project-name`.
 
-Change all MyProject and my-project to your project name and namespace!
+Change all `MyProject` and `my-project` to your project name and namespace!
 
 The package is under work in progress and will change over time.
 
@@ -35,4 +35,4 @@ composer run-script test
 
 ## Other
 
-[roots-wp-salt]:https://roots.io/salts.html
+[roots-wp-salt](https://roots.io/salts.html)
