@@ -1,0 +1,71 @@
+{
+  "name": "elseif/bedrock",
+  "type": "project",
+  "license": "MIT",
+  "version": "1.0",
+  "description": "WordPress/Bedrock boilerplate Elseif AB",
+  "homepage": "https://www.elseif.se/",
+  "authors": [
+    {
+      "name": "Andreas Ek",
+      "email": "andreas@elseif.se",
+      "homepage": "https://www.elseif.se"
+    }
+  ],
+  "keywords": [
+    "bedrock", "wordpress", "composer", "vagrant", "wp"
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=7",
+    "composer/installers": "~1.0.12",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "*",
+    "oscarotero/env": "^1.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "wp-cli/wp-cli": "*"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "~2",
+    "symfony/console": "~2",
+    "symfony/debug": "~2",
+    "symfony/finder": "~2",
+    "symfony/process": "~2",
+    "symfony/yaml": "~2",
+    "deployer/deployer":"~4",
+    "laravel/homestead": "~3",
+    "phpunit/phpunit": "~5",
+    "phpmd/phpmd": "~2",
+    "phpcasperjs/phpcasperjs": "~1"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "autoload": {
+    "psr-4": {
+      "Vendor\\MyProject\\": "./src/MyProject"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Vendor\\MyProject\\": "./tests/units/MyProject"
+    }
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpcs --standard=ruleset-codestyle.xml --ignore=web/wp/,vendor/ -n -s .",
+      "vendor/bin/phpmd src,tests text ruleset-messdetect.xml",
+      "vendor/bin/phpunit -c ruleset-phpunit.xml"
+    ]
+  }
+}

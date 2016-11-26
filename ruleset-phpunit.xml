@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="bootstrap.php"
+         backupGlobals="false"
+         colors="auto"
+         forceCoversAnnotation="true"
+         verbose="true">
+    <testsuites>
+        <testsuite name="Bedrock">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="false">
+            <directory>src</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <const name="PHPUNIT" value="true"/>
+    </php>
+    <logging>
+        <log type="coverage-text" target="php://stdout" showOnlySummary="false"/>
+    </logging>
+</phpunit>

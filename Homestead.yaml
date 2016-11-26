@@ -1,0 +1,37 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+hostname: MyProject
+name: MyProject
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "."
+      to: "/home/vagrant/MyProject"
+      type: "nfs"
+
+sites:
+    - map: my-project.app
+      to: "./web"
+
+databases:
+    - my-project
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
