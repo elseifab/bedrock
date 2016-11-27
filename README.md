@@ -51,4 +51,6 @@ Checks/runs:
 
 ## Other
 
-[roots-wp-salt](https://roots.io/salts.html)
+* [roots-wp-salt](https://roots.io/salts.html)
+* Use Gitflow in your projects via Sourcetree or install Gitflow with brew: `brew install git-flow`.
+
