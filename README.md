@@ -25,7 +25,17 @@ Vagrant box Homestead as a "per project install".
 vagrant up
 ```
 
+## [PHP Deployer](https://deployer.org/)
+
+Deployer scripts use PHP Deployer.
+
 ## Tests
+
+### Requirements
+
+* Node and CasperJS, install: `npm install -g phantomjs casperjs`
+
+### Running tests
 
 Run quality assurance test through composer:
 
@@ -33,6 +43,14 @@ Run quality assurance test through composer:
 composer run-script test
 ```
 
+Checks/runs:
+
+* PHPCS
+* PHPMD
+* PHPUnit
+
 ## Other
 
-[roots-wp-salt](https://roots.io/salts.html)
+* [roots-wp-salt](https://roots.io/salts.html)
+* Use Gitflow in your projects via Sourcetree or install Gitflow with brew: `brew install git-flow`.
+
