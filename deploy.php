@@ -21,13 +21,13 @@ server('production', 'elseif.se', 22)
     ->set('deploy_path', '~/my-project.elseif.se')
     ->stage('production')
     ->user('forge')
-    ->set('branch','master')
+    ->set('branch', 'master')
     ->identityFile();
 
 /**
  * Install global npm packages to provide with a CasperJS engine
  */
-task('startup:tests', function() {
+task('startup:tests', function () {
     writeln("Setting up CasperJS to support testing...");
     $output = run("sudo npm install -g phantomjs && sudo npm install -g casperjs");
     writeln($output);
